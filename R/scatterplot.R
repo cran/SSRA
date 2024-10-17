@@ -2,15 +2,14 @@
 #'
 #' This function produces a scatterplot matrix
 #'
-#' Using a scatterplot matrix, an overview of the answer patterns for the pairs of items can be taken.
+#' Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 #'
 #' @param data    a data frame
-#' @param select  select items to be plotted
 #' @param type    type of plot, i.e., 'jitter', 'size', 'count', and 'sun'
 #'
 #' @author
-#' Takuya Yanagida \email{takuya.yanagida@@univie.ac.at},
-#' Keiko Sakai \email{keiko.sakai@@oit.ac.jp}
+#' Takuya Yanagida
+#' Keiko Sakai
 #'
 #' @seealso
 #' \code{\link{TSSA}}, \code{\link{SSRA}}
@@ -24,9 +23,6 @@
 #' @examples
 #' # Example data based on Takeya (1991)
 #'
-#' # Select items to be plotted
-#' scatterplot(exdat, select = c("Item2", "Item3", "Item4"))
-#'
 #' # Scatterplot matrix: jitter
 #' scatterplot(exdat)
 #'
@@ -38,28 +34,11 @@
 #'
 #' # Scatterplot matrix: sun
 #' scatterplot(exdat, type = "sun")
-scatterplot <- function(data, select = NULL,
-                        type = c("jitter", "size", "count", "sun")) {
+scatterplot <- function(data, type = c("jitter", "size", "count", "sun")) {
 
   #--------------------------------------------------------------------------------------------------------------------#
 
   data <- na.omit(data)
-
-  ###
-
-  if (!is.null(select)) {
-
-    if (length(select) == 1) {
-
-      stop("Select at least two items")
-
-    }
-
-    data <- data[, select]
-
-  }
-
-  ###
 
   type <- ifelse(all(c("jitter", "size", "count", "sun") %in% type), "jitter", type)
 
@@ -86,5 +65,7 @@ scatterplot <- function(data, select = NULL,
     pairs(data, panel = internal.sunflowerplot)
 
   }
+
+  #------------------------------------------------#
 
 }

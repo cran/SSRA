@@ -23,10 +23,7 @@
 \code{summary} function for the \code{seqtab} object
 }
 \details{
-Summary function for the seqtab object.
-
-In this function, the number of the sequences is counted. 'Sequence' means a range of items
-with sequential relations. Sequences are classified in their length and are counted.
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 }
 \examples{
 # Example data based on Takeya (1991)
@@ -38,8 +35,8 @@ exdat.seqtab<- seqtable(exdat.ssra, output = FALSE)
 summary(exdat.seqtab)
 }
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at},
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

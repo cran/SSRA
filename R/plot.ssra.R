@@ -2,9 +2,7 @@
 #'
 #' Function for plotting the ssra object
 #'
-#' Using this function, all item pairs are plotted on a graph by their correlation coefficients and
-#' their mean differences (Cohen's d). This graph is useful for defining (or changing) criteria regarding
-#' correlation coefficient and mean difference to judge whether an item pair is 'sequential' or 'equal'.
+#' Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 #'
 #' @param x         requires the return object from the SSRA function
 #' @param r.crt     minimal absolute correlation to be judged 'sequential'
@@ -18,8 +16,8 @@
 #' @param ...       further arguments passed to or from other methods
 #'
 #' @author
-#' Takuya Yanagida \email{takuya.yanagida@@univie.ac.at},
-#' Keiko Sakai \email{keiko.sakai@@oit.ac.jp}
+#' Takuya Yanagida
+#' Keiko Sakai
 #'
 #' @seealso
 #' \code{\link{SSRA}}, \code{\link{treegram}}, \code{\link{scatterplot}}
@@ -31,12 +29,14 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' # Example data based on Takeya (1991)
 #'
 #' # Sakai Sequential Relation Analysis
 #' # ordering assesed according to the correlation coefficient and mean difference
 #' exdat.ssra <- SSRA(exdat, output = FALSE)
 #' plot(exdat.ssra)
+#' }
 plot.ssra <- function(x, r.crt = NULL, r.sig = TRUE, d.sq = NULL, m.sig = TRUE,
                       sig.col = TRUE, col = c("red2", "green4", "blue3", "black"),
                       pch = c(1, 2, 0, 4), mar = c(3.5, 3.5, 1.5, 1), ...) {
@@ -44,7 +44,7 @@ plot.ssra <- function(x, r.crt = NULL, r.sig = TRUE, d.sq = NULL, m.sig = TRUE,
   #--------------------------------------------------------------------------------------------------------------------#
 
   # Check class of object
-  if (class(x) !=  "ssra") {
+  if (!inherits(x, what = "ssra")) {
 
     stop("Input is not a ssra object")
 

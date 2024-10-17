@@ -5,11 +5,11 @@
 \title{Sakai Sequential Relation Analysis}
 \usage{
 SSRA(dat, r.crt = 0.3, mu.sq = 0, mu.eq = Inf, d.sq = 0.2, d.eq = 0.2,
-  pairwise = TRUE, method = c("pearson", "kendall", "spearman"), alpha = 0.05,
-  p.adjust.method = c("holm", "hochberg", "hommel",
-                      "bonferroni", "BH", "BY", "fdr", "none"),
-  digits = 3, vnames = TRUE, order = c("no", "decreasing", "increasing"),
-  exclude = TRUE, output = TRUE)
+  pairwise = TRUE, method = c("pearson", "kendall", "spearman"),
+  alpha = 0.05, p.adjust.method = c("holm", "hochberg", "hommel",
+  "bonferroni", "BH", "BY", "fdr", "none"), digits = 3, vnames = TRUE,
+  order = c("no", "decreasing", "increasing"), exclude = TRUE,
+  output = TRUE)
 }
 \arguments{
 \item{dat}{requires a data frame with polytomous data}
@@ -25,7 +25,7 @@ SSRA(dat, r.crt = 0.3, mu.sq = 0, mu.eq = Inf, d.sq = 0.2, d.eq = 0.2,
 \item{d.eq}{maximal effect size Cohen's d to be judged 'equivalent'}
 
 \item{pairwise}{pairwise deletion of missing data,
-if \code{pairwise = FALSE} listwise deletion is applied}
+if pairwise = FALSE listwise deletion is applied}
 
 \item{method}{character string indicating which correlation coefficient to be used,
   'pearson' = Pearson's product moment correlation coefficien
@@ -81,13 +81,10 @@ The 'restab' entry has following entries:
  }
 }
 \description{
-This function conducts Sakai Sequential Relation Analysis (SSRA) based on Sakai 2016.
+This function conducts the Sequential Relation Analysis based on Sakai 2016
 }
 \details{
-In Sakai Sequential Relation Analysis (SSRA), a pair of items is judged 'sequential', if there is
-a higher correlation and a bigger mean difference than defined criterions between the two items.
-If there is a higher correlation and a smaller mean difference than defined criterions between the
-two items, the relation of the two items is judged 'equal'.
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 }
 \examples{
 # Example data based on Takeya (1991)
@@ -97,8 +94,8 @@ two items, the relation of the two items is judged 'equal'.
 SSRA(exdat)
 }
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at},
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

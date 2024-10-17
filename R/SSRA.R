@@ -1,11 +1,8 @@
 #' Sakai Sequential Relation Analysis
 #'
-#' This function conducts Sakai Sequential Relation Analysis (SSRA) based on Sakai 2016.
+#' This function conducts the Sequential Relation Analysis based on Sakai 2016
 #'
-#' In Sakai Sequential Relation Analysis (SSRA), a pair of items is judged 'sequential', if there is
-#' a higher correlation and a bigger mean difference than defined criterions between the two items.
-#' If there is a higher correlation and a smaller mean difference than defined criterions between the
-#' two items, the relation of the two items is judged 'equal'.
+#' Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 #'
 #' @param dat		 	    	   requires a data frame with polytomous data
 #' @param r.crt		    	   correlation coefficient criterion to be judged 'sequential' or 'equivalent
@@ -14,7 +11,7 @@
 #' @param d.sq  		     	 effect size for mean difference criterion to be judged 'sequential'
 #' @param d.eq    	     	 maximal effect size Cohen's d to be judged 'equivalent'
 #' @param pairwise         pairwise deletion of missing data,
-#'                         if \code{pairwise = FALSE} listwise deletion is applied
+#'                         if pairwise = FALSE listwise deletion is applied
 #' @param method	         character string indicating which correlation coefficient to be used,
 #'							           'pearson' = Pearson's product moment correlation coefficien
 #'						             'spearman' = Spearman's rho statistic
@@ -28,8 +25,8 @@
 #' @param output           print result table?
 #'
 #' @author
-#' Takuya Yanagida \email{takuya.yanagida@@univie.ac.at},
-#' Keiko Sakai \email{keiko.sakai@@oit.ac.jp}
+#' Takuya Yanagida
+#' Keiko Sakai
 #'
 #' @return
 #' Returns an object of class \code{ssra}, to be used for the \code{seqtable} function. The object is a list with

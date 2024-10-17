@@ -2,8 +2,7 @@
 #'
 #' This function builds a table for the tssa and ssra object used to create a treegram
 #'
-#' In this table, we can see how many 'sequential' or 'equal' relations each of items has
-#' with the other items.
+#' Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 #'
 #' @param object      requires the return object from the TSSA or SSRA function
 #' @param order       sort by item mean of j?
@@ -11,8 +10,8 @@
 #' @param output      print result table?
 #'
 #' @author
-#' Takuya Yanagida \email{takuya.yanagida@@univie.ac.at},
-#' Keiko Sakai \email{keiko.sakai@@oit.ac.jp}
+#' Takuya Yanagida
+#' Keiko Sakai
 #'
 #' @seealso
 #' \code{\link{TSSA}}, \code{\link{SSRA}}, \code{\link{treegram}}, \code{\link{summary.seqtable}}
@@ -26,7 +25,7 @@
 #' @examples
 #' # Example data based on Takeya (1991)
 #'
-#' # Takeya Semantic Structure Analysis
+#' # Takea Semantic Structure Analysis
 #' # ordering assesed according to the correlation coefficient and mean difference
 #' exdat.tssa <- TSSA(exdat, m = 5, output = FALSE)
 #' seqtable(exdat.tssa)

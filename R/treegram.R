@@ -1,12 +1,8 @@
 #' Treegram
 #'
-#' This function draws a treegram for the Takeya Semantic Structure Analysis (TSSA) and
-#' Sakai Sequential Relation Analysis (SSRA)
+#' This function draws a treegram for the Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA)
 #'
-#' An item with lower item mean is located above, and an item with higher item mean is placed below
-#' in a treegram. An arrow is drawn between two items in sequential relation, namely, from the item
-#' with higher item mean to the item with lower item mean. And two items in equal relation are linked
-#' by a dashed line.
+#' Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 #'
 #' @param object     requires the result object of seqtab function
 #' @param select     select items to be plotted
@@ -23,8 +19,8 @@
 #' @param cex.legend legend character expansion factor relative to current par("cex)
 #'
 #' @author
-#' Takuya Yanagida \email{takuya.yanagida@@univie.ac.at},
-#' Keiko Sakai \email{keiko.sakai@@oit.ac.jp}
+#' Takuya Yanagida
+#' Keiko Sakai
 #'
 #' @seealso
 #' \code{\link{seqtable}}
@@ -69,7 +65,7 @@ treegram <- function(object, select = NULL,
   #------------------------------------------------------------------------------------------------------#
 
   # Check class of object
-  if (class(object) != "seqtable") {
+  if (!inherits(object, what = "seqtable")) {
 
     stop("Input is not a seqtable object")
 
@@ -204,7 +200,7 @@ treegram <- function(object, select = NULL,
       x <- formatC(x, format = "f", width = max(nchar(x)), digits = 0)
 
       legend("topright", col = object$col[ord], lty = rep(1, times = 12),
-             legend = paste0(object$item.leg[ord], " (",
+             legend = paste0(paste0("Item ", x, ": ", object$item.leg[ord]), " (",
                              formatC(object$x.pos[ord], format = "f", width = max(nchar(object$x.pos)), digits = x.digits), ", ",
                              formatC(object$mean[ord] * -1, format = "f", digits = y.digits), ")" ),
              bty = "n", y.intersp = y.intersp, cex = cex.legend)

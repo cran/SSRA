@@ -2,13 +2,13 @@
 % Please edit documentation in R/TSSA.R
 \name{TSSA}
 \alias{TSSA}
-\title{Takeya Semantic Structure Analysis}
+\title{Takea Semantic Structure Analysis}
 \usage{
-TSSA(dat, m, crit = 0.93, pairwise = TRUE, sig = FALSE, exact = TRUE, alpha = 0.05,
-  p.adjust.method = c("holm", "hochberg", "hommel",
-                      "bonferroni", "BH", "BY", "fdr", "none"),
-  digits = 3, vnames = TRUE, order = c("no", "decreasing", "increasing"),
-  exclude = TRUE, output = TRUE)
+TSSA(dat, m, crit = 0.93, pairwise = TRUE, sig = FALSE, exact = TRUE,
+  alpha = 0.05, p.adjust.method = c("holm", "hochberg", "hommel",
+  "bonferroni", "BH", "BY", "fdr", "none"), digits = 3, vnames = TRUE,
+  order = c("no", "decreasing", "increasing"), exclude = TRUE,
+  output = TRUE)
 }
 \arguments{
 \item{dat}{requires a data frame with polytomous data,
@@ -55,41 +55,37 @@ The 'restab' entry has following entries:
    \code{k.mean}   \tab mean of item k \cr
    \code{k.sd}     \tab standard devication of item k \cr
    \code{c.jk}	   	\tab ordering coefficient j -> k \cr
-   \code{p.jk}     \tab p-value j -> k  (available if \code{sig = TRUE}) \cr
+   \code{p.jk}     \tab p-value j -> k  (available if sig = TRUE) \cr
    \code{sig.jk}   \tab statistical significane p-value j -> k  (0 = no / 1 = yes; available if sig = TRUE) \cr
    \code{c.kj}     \tab ordering coefficient k -> j \cr
-   \code{p.kj}     \tab p-value k -> j  (0 = no / 1 = yes; available if \code{sig = TRUE}) \cr
-   \code{sig.kj}   \tab statistical significane p-value k -> j (available if \code{sig = TRUE}) \cr
+   \code{p.kj}     \tab p-value k -> j  (0 = no / 1 = yes; available if sig = TRUE) \cr
+   \code{sig.kj}   \tab statistical significane p-value k -> j (available if sig = TRUE) \cr
    \code{crt.jk}   \tab ordering j -> k \cr
    \code{crt.kj}   \tab ordering k -> j \cr
    \code{order}    \tab order structure of item pairs ("=", "+","-") \cr
  }
 }
 \description{
-This function conducts Takeya Semantic Structure Analysis (TSSA) for polytomous items based on
-Takeya 1991.
+This function conducts the Semantic Structure Analysis for polytomous items
+based on Takeya 1991
 }
 \details{
-In Takeya Semantic Structure Analysis (TSSA), a pair of items (e.g., Item1 and Item2) is judged 'sequential',
-if exceptional answer patterns are less than a defined criterion. If we suppose Item1 to be the item with higher
-item mean than Item2 (i.e., 'Item1 -> Item2' in the treegram), 'exceptional answer patter' means that somone
-gets a lower score on Item1 and a higher score on Item2. If this kind of sequential relation is bi-directional
-(i.e., not only 'Item1 -> Item2' but also 'Item2 -> Item1'), the relation of the two items is judged 'equal'.
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 }
 \examples{
 # Example data based on Takeya (1991)
 
-# Takeya Semantic Structure Analysis
+# Takea Semantic Structure Analysis
 # ordering assesed according to the ordering coefficient
 TSSA(exdat, m = 5)
 
-# Takeya Semantic Structure Analysis including statistical testing
+# Takea Semantic Structure Analysis including statistical testing
 # ordering assesed according to the ordering coefficient and statistical significance
 TSSA(exdat, m = 5, sig = TRUE)
 }
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at}
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

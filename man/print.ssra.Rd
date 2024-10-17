@@ -16,6 +16,9 @@
 \description{
 \code{print} function for the \code{ssra} object
 }
+\details{
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
+}
 \examples{
 # Example data based on Takeya (1991)
 
@@ -25,8 +28,8 @@ exdat.ssra <- SSRA(exdat, output = FALSE)
 print(exdat.ssra)
 }
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at},
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

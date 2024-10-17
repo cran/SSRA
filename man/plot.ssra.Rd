@@ -5,9 +5,8 @@
 \title{Plot ssra}
 \usage{
 \method{plot}{ssra}(x, r.crt = NULL, r.sig = TRUE, d.sq = NULL,
-  m.sig = TRUE, sig.col = TRUE,
-  col = c("red2", "green4", "blue3", "black"),
-  pch = c(1, 2, 0, 4), mar = c(3.5, 3.5, 1.5, 1), ...)
+  m.sig = TRUE, sig.col = TRUE, col = c("red2", "green4", "blue3",
+  "black"), pch = c(1, 2, 0, 4), mar = c(3.5, 3.5, 1.5, 1), ...)
 }
 \arguments{
 \item{x}{requires the return object from the SSRA function}
@@ -34,11 +33,10 @@
 Function for plotting the ssra object
 }
 \details{
-Using this function, all item pairs are plotted on a graph by their correlation coefficients and
-their mean differences (Cohen's d). This graph is useful for defining (or changing) criteria regarding
-correlation coefficient and mean difference to judge whether an item pair is 'sequential' or 'equal'.
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 }
 \examples{
+\dontrun{
 # Example data based on Takeya (1991)
 
 # Sakai Sequential Relation Analysis
@@ -46,9 +44,10 @@ correlation coefficient and mean difference to judge whether an item pair is 'se
 exdat.ssra <- SSRA(exdat, output = FALSE)
 plot(exdat.ssra)
 }
+}
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at},
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

@@ -6,10 +6,11 @@
   d1 <- desc$Version
   nk <- paste0(rep(" ", 20 - nchar(d1)))
 
-  packageStartupMessage("|-----------------------------------------|\n",
-                          paste0("| ", desc$Package, " ", d1," (",desc$Date,")"), nk, "  |\n" ,
-                        "|      Sakai Sequential Relation Analysis |\n" ,
-                        "|-----------------------------------------|")
+  packageStartupMessage("|----------------------------------------------|\n",
+                          paste0("| ", desc$Package, " ", d1," (",desc$Date,")"), nk, "       |\n" ,
+                        "|      Sakai Sequential Relation Analysis      |\n" ,
+                        "|----------------------------------------------|\n",
+                        "SSRA is a BETA software. Please report any bugs.")
 
 }
 

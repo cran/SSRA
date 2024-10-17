@@ -4,10 +4,9 @@
 \alias{treegram}
 \title{Treegram}
 \usage{
-treegram(object, select = NULL, pos = NULL, col = NULL,
-  mai = c(0.2, 0, 0.2, 0.2), print.pos = TRUE, cex.text = 0.95,
-  x.factor = 1.7, x.digits = 0, y.digits = 2, y.intersp = 1.45,
-  cex.legend = 0.9)
+treegram(object, select = NULL, pos = NULL, col = NULL, mai = c(0.2, 0,
+  0.2, 0.2), print.pos = TRUE, cex.text = 0.95, x.factor = 1.7,
+  x.digits = 0, y.digits = 2, y.intersp = 1.45, cex.legend = 0.9)
 }
 \arguments{
 \item{object}{requires the result object of seqtab function}
@@ -36,14 +35,10 @@ which gives the margin size specified in inches}
 \item{cex.legend}{legend character expansion factor relative to current par("cex)}
 }
 \description{
-This function draws a treegram for the Takeya Semantic Structure Analysis (TSSA) and
-Sakai Sequential Relation Analysis (SSRA)
+This function draws a treegram for the Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA)
 }
 \details{
-An item with lower item mean is located above, and an item with higher item mean is placed below
-in a treegram. An arrow is drawn between two items in sequential relation, namely, from the item
-with higher item mean to the item with lower item mean. And two items in equal relation are linked
-by a dashed line.
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 }
 \examples{
 # Example data based on Takeya (1991)
@@ -73,8 +68,8 @@ treegram(exdat.seqtab,
                  Item3 = "gray99", Item2 = "darkgreen", Item1 = "darkorange2"))
 }
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at},
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

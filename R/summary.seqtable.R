@@ -2,18 +2,15 @@
 #'
 #' \code{summary} function for the \code{seqtab} object
 #'
-#' Summary function for the seqtab object.
-#'
-#' In this function, the number of the sequences is counted. 'Sequence' means a range of items
-#' with sequential relations. Sequences are classified in their length and are counted.
+#' Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 #'
 #' @param object  requires the result object of seqtable function
 #' @param exclude exclude lower-order paths (i.e., paths included in higher order paths)?
 #' @param ...     additional arguments affecting the summary produced
 #'
 #' @author
-#' Takuya Yanagida \email{takuya.yanagida@@univie.ac.at},
-#' Keiko Sakai \email{keiko.sakai@@oit.ac.jp}
+#' Takuya Yanagida
+#' Keiko Sakai
 #'
 #' @return
 #' \tabular{ll}{
@@ -43,7 +40,7 @@ summary.seqtable <- function(object, exclude = TRUE, ...) {
   #------------------------------------------------------------------------------------------------------#
 
   # Check class of object
-  if (class(object) != "seqtable") {
+  if (!inherits(object, what = "seqtable")) {
 
     stop("Input is not a seqtable object")
 

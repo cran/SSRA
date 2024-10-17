@@ -4,8 +4,8 @@
 \alias{seqtable}
 \title{Sequential Relation Table}
 \usage{
-seqtable(object, order = c("no", "decreasing", "increasing"),
-  digits = 3, output = TRUE)
+seqtable(object, order = c("no", "decreasing", "increasing"), digits = 3,
+  output = TRUE)
 }
 \arguments{
 \item{object}{requires the return object from the TSSA or SSRA function}
@@ -20,13 +20,12 @@ seqtable(object, order = c("no", "decreasing", "increasing"),
 This function builds a table for the tssa and ssra object used to create a treegram
 }
 \details{
-In this table, we can see how many 'sequential' or 'equal' relations each of items has
-with the other items.
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 }
 \examples{
 # Example data based on Takeya (1991)
 
-# Takeya Semantic Structure Analysis
+# Takea Semantic Structure Analysis
 # ordering assesed according to the correlation coefficient and mean difference
 exdat.tssa <- TSSA(exdat, m = 5, output = FALSE)
 seqtable(exdat.tssa)
@@ -37,8 +36,8 @@ exdat.ssra <- SSRA(exdat, output = FALSE)
 seqtable(exdat.ssra)
 }
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at},
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

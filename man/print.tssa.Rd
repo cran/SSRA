@@ -16,22 +16,25 @@
 \description{
 \code{print} function for the \code{tssa} object
 }
+\details{
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
+}
 \examples{
 # Example data based on Takeya (1991)
 
-# Takeya Semantic Structure Analysis
+# Takea Semantic Structure Analysis
 # ordering assesed according to the ordering coefficient
 exdat.tssa <- TSSA(exdat, m = 5, output = FALSE)
 print(exdat.tssa)
 
-# Takeya Semantic Structure Analysis including statistical testing
+# Takea Semantic Structure Analysis including statistical testing
 # ordering assesed according to the ordering coefficient and statistical significance
 exdat.tssa <- TSSA(exdat, m = 5, sig = TRUE, output = FALSE)
 print(exdat.tssa)
 }
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at},
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

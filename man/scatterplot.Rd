@@ -4,12 +4,10 @@
 \alias{scatterplot}
 \title{Scatterplot Matrices}
 \usage{
-scatterplot(data, select = NULL, type = c("jitter", "size", "count", "sun"))
+scatterplot(data, type = c("jitter", "size", "count", "sun"))
 }
 \arguments{
 \item{data}{a data frame}
-
-\item{select}{select items to be plotted}
 
 \item{type}{type of plot, i.e., 'jitter', 'size', 'count', and 'sun'}
 }
@@ -17,13 +15,10 @@ scatterplot(data, select = NULL, type = c("jitter", "size", "count", "sun"))
 This function produces a scatterplot matrix
 }
 \details{
-Using a scatterplot matrix, an overview of the answer patterns for the pairs of items can be taken.
+Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
 }
 \examples{
 # Example data based on Takeya (1991)
-
-# Select items to be plotted
-scatterplot(exdat, select = c("Item2", "Item3", "Item4"))
 
 # Scatterplot matrix: jitter
 scatterplot(exdat)
@@ -38,8 +33,8 @@ scatterplot(exdat, type = "count")
 scatterplot(exdat, type = "sun")
 }
 \author{
-Takuya Yanagida \email{takuya.yanagida@univie.ac.at},
-Keiko Sakai \email{keiko.sakai@oit.ac.jp}
+Takuya Yanagida
+Keiko Sakai
 }
 \references{
 Takeya, M. (1991). \emph{A new test theory: Structural analyses for educational information}.

@@ -2,13 +2,15 @@
 #'
 #' \code{print} function for the \code{tssa} object
 #'
+#' Takea Semantic Structure Analysis (TSSA) and Sakai Sequential Relation Analysis (SSRA) are graphical approaches
+#'
 #' @param x        requires the result object of hssr function
 #' @param digits   integer indicating the number of decimal places to be used
 #' @param ...      further arguments passed to or from other methods
 #'
 #' @author
-#' Takuya Yanagida \email{takuya.yanagida@@univie.ac.at},
-#' Keiko Sakai \email{keiko.sakai@@oit.ac.jp}
+#' Takuya Yanagida
+#' Keiko Sakai
 #'
 #' @seealso
 #' \code{\link{seqtable}}
@@ -22,12 +24,12 @@
 #' @examples
 #' # Example data based on Takeya (1991)
 #'
-#' # Takeya Semantic Structure Analysis
+#' # Takea Semantic Structure Analysis
 #' # ordering assesed according to the ordering coefficient
 #' exdat.tssa <- TSSA(exdat, m = 5, output = FALSE)
 #' print(exdat.tssa)
 #'
-#' # Takeya Semantic Structure Analysis including statistical testing
+#' # Takea Semantic Structure Analysis including statistical testing
 #' # ordering assesed according to the ordering coefficient and statistical significance
 #' exdat.tssa <- TSSA(exdat, m = 5, sig = TRUE, output = FALSE)
 #' print(exdat.tssa)
